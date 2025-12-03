@@ -59,11 +59,13 @@ sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS li
 
      - sudo systemctl start mysql
 
-       <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2fe30c46-a3eb-4466-a3b0-d46204ed6c42" />
+       <img width="1160" height="327" alt="Screenshot (145)" src="https://github.com/user-attachments/assets/a9c7ec50-1307-4cb0-a3dd-8c8ff3bdcd69" />
+
 
      - sudo systemctl stop mysql
 
-       <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6130b570-cc82-4a6c-961d-60f120a94a96" />
+       <img width="1414" height="360" alt="Screenshot (146)" src="https://github.com/user-attachments/assets/76dea007-a90a-4283-958e-704a40be4740" />
+
 
      - sudo systemctl restart mysql
 
