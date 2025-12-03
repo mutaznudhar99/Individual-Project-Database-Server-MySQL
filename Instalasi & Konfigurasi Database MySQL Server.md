@@ -1,8 +1,8 @@
-sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS Ubuntu, pastikan OS sudah terinstall dan terkonfigurasi pada OS di desktop menggunakan virtual machine.
+sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS linux, pastikan OS sudah terinstall dan terkonfigurasi pada OS di desktop menggunakan virtual machine.
 
 
 
-1. Update operasi sistem ubuntu
+1. Update operasi sistem linux
    - dilakukan untuk memperbarui dan menginstall repository index pada system
      <img width="744" height="224" alt="Screenshot (133)" src="https://github.com/user-attachments/assets/a1c7d1a7-007b-4a65-a455-9717dbbd5d74" />
      
@@ -26,7 +26,7 @@ sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS Ub
       <img width="1106" height="202" alt="Screenshot (138)" src="https://github.com/user-attachments/assets/d9ac6516-2446-4ed6-b803-132827e74916" />
 
 
-3. Install database mysql server dan cek apakah database sudah terinstall atau belum
+3. Install database mysql server dan cek apakah database sudah aktif atau belum
 
       sudo apt install mysql-server-versi
 
@@ -35,6 +35,26 @@ sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS Ub
       sudo systemctl status mysql
    
       <img width="1000" height="307" alt="Screenshot (143)" src="https://github.com/user-attachments/assets/360558f7-0d4f-4bfb-96d8-801860834117" />
+
+
+4. setting password untuk user 'root'
+   - secara default, Database MySQL Server yang baru saja di instalasi di os linux sepenuhnya belum terenksipsi. artinya, user root bisa terkoneksi ke dalam database tanpa sebuah security server.
+
+     sudo mysql
+
+     <img width="1692" height="252" alt="Screenshot (142)" src="https://github.com/user-attachments/assets/e3d96deb-8b77-4dcb-8f00-01544db358bf" />
+
+
+     sudo mysql_secure_installation
+
+     <img width="1692" height="252" alt="Screenshot (142)" src="https://github.com/user-attachments/assets/9f0398b1-cf43-46fa-88b5-db31b094349a" />
+     - ikuti wizard konfigurasi pada server dengan input password baru dan "Yes" sampai selesai.
+     - tidak bisa lagi terkoneksi ke database server hanya dengan syntax **Sudo mysql**
+       
+
+     
+
+
 
 
 
