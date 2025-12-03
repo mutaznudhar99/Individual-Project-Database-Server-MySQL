@@ -7,68 +7,67 @@ sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS li
 
      - sudo apt update
        
-     <img width="744" height="224" alt="Screenshot (133)" src="https://github.com/user-attachments/assets/a1c7d1a7-007b-4a65-a455-9717dbbd5d74" />
+       <img width="744" height="224" alt="Screenshot (133)" src="https://github.com/user-attachments/assets/a1c7d1a7-007b-4a65-a455-9717dbbd5d74" />
      
      - sudo apt list --upgradable
      
-     <img width="1058" height="149" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/b8d4a0f6-4994-4e13-b6f2-9641d1d204d2" />
+       <img width="1058" height="149" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/b8d4a0f6-4994-4e13-b6f2-9641d1d204d2" />
 
      - sudo apt upgrade
 
-     <img width="1660" height="265" alt="Screenshot (135)" src="https://github.com/user-attachments/assets/e370cc77-619d-4fbb-b6e0-ccd031af1b7f" />
+       <img width="1660" height="265" alt="Screenshot (135)" src="https://github.com/user-attachments/assets/e370cc77-619d-4fbb-b6e0-ccd031af1b7f" />
 
 
 3. Mencari MySQL Package yang tersedia di dalam operasi sistem
 
-      apt-cache search mysql-server
+     - apt-cache search mysql-server
    
-      <img width="1042" height="195" alt="Screenshot (137)" src="https://github.com/user-attachments/assets/b394efd1-c021-4c19-860e-44b1a25591a5" />
+       <img width="1042" height="195" alt="Screenshot (137)" src="https://github.com/user-attachments/assets/b394efd1-c021-4c19-860e-44b1a25591a5" />
 
-      apt info -a mysql-server-versi
+     - apt info -a mysql-server-versi
    
-      <img width="1106" height="202" alt="Screenshot (138)" src="https://github.com/user-attachments/assets/d9ac6516-2446-4ed6-b803-132827e74916" />
+       <img width="1106" height="202" alt="Screenshot (138)" src="https://github.com/user-attachments/assets/d9ac6516-2446-4ed6-b803-132827e74916" />
 
 
 4. Install database mysql server dan cek apakah database sudah aktif atau belum
 
-      sudo apt install mysql-server-versi
+     - sudo apt install mysql-server-versi
 
-      <img width="1093" height="541" alt="Screenshot (139)" src="https://github.com/user-attachments/assets/830695bb-bdb8-4166-8bab-0b6d4d6b8cff" />
+       <img width="1093" height="541" alt="Screenshot (139)" src="https://github.com/user-attachments/assets/830695bb-bdb8-4166-8bab-0b6d4d6b8cff" />
 
-      sudo systemctl status mysql
+     - sudo systemctl status mysql
    
-      <img width="1000" height="307" alt="Screenshot (143)" src="https://github.com/user-attachments/assets/360558f7-0d4f-4bfb-96d8-801860834117" />
+       <img width="1000" height="307" alt="Screenshot (143)" src="https://github.com/user-attachments/assets/360558f7-0d4f-4bfb-96d8-801860834117" />
 
 
 5. setting password untuk user 'root'
    - secara default, Database MySQL Server yang baru saja di instalasi di os linux sepenuhnya belum terenksipsi. artinya, user root bisa terkoneksi ke dalam database tanpa sebuah security server.
 
-     sudo mysql
+     - sudo mysql
 
-     <img width="1692" height="252" alt="Screenshot (142)" src="https://github.com/user-attachments/assets/e3d96deb-8b77-4dcb-8f00-01544db358bf" />
+       <img width="1692" height="252" alt="Screenshot (142)" src="https://github.com/user-attachments/assets/e3d96deb-8b77-4dcb-8f00-01544db358bf" />
 
+     - sudo mysql_secure_installation
 
-     sudo mysql_secure_installation
-
-     <img width="1391" height="599" alt="Screenshot (144)" src="https://github.com/user-attachments/assets/e5ff46d3-535e-44bf-823b-6d39ce3d861e" />
-     - ikuti wizard konfigurasi pada server dengan input password baru dan "Yes" sampai selesai.
-     - tidak bisa lagi terkoneksi ke database server hanya dengan syntax **Sudo mysql**
+       <img width="1391" height="599" alt="Screenshot (144)" src="https://github.com/user-attachments/assets/e5ff46d3-535e-44bf-823b-6d39ce3d861e" />
+       - ikuti wizard konfigurasi pada server dengan input password baru dan "Yes" sampai selesai.
+       - tidak bisa lagi terkoneksi ke database server hanya dengan syntax **Sudo mysql**
 
 
 6. kontrol systemctl database pada os
    - biasanya dilakukan ketika ingin melakukan cold backup atau setelah perubahan configurasi pada mysqld.cnf/my.ini
 
-     sudo systemctl start [namaservice]
+     - sudo systemctl start [namaservice]
 
-     <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2fe30c46-a3eb-4466-a3b0-d46204ed6c42" />
+       <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2fe30c46-a3eb-4466-a3b0-d46204ed6c42" />
 
-     sudo systemctl stop [namaservice]
+     - sudo systemctl stop [namaservice]
 
-     <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6130b570-cc82-4a6c-961d-60f120a94a96" />
+       <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6130b570-cc82-4a6c-961d-60f120a94a96" />
 
-     sudo systemctl restart [namaservice]
+     - sudo systemctl restart [namaservice]
 
-     <img width="1234" height="328" alt="Screenshot (147)" src="https://github.com/user-attachments/assets/0274e59f-4110-4d97-a0f5-1ed660a3920e" />
+       <img width="1234" height="328" alt="Screenshot (147)" src="https://github.com/user-attachments/assets/0274e59f-4110-4d97-a0f5-1ed660a3920e" />
 
 
      
