@@ -33,6 +33,7 @@ sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS Ub
       <img width="1093" height="541" alt="Screenshot (139)" src="https://github.com/user-attachments/assets/830695bb-bdb8-4166-8bab-0b6d4d6b8cff" />
 
       sudo systemctl status mysql
+   
       <img width="1000" height="307" alt="Screenshot (143)" src="https://github.com/user-attachments/assets/360558f7-0d4f-4bfb-96d8-801860834117" />
 
 
