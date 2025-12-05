@@ -27,27 +27,36 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
      <img width="907" height="147" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/57b24600-fb6b-4c46-90c2-6452260e6e79" />
 
 
+2. membuat file mkdir -r /mnt/backups yang digunakan untuk menyimpan backup sementara.
+   <img width="942" height="223" alt="Screenshot (178)" src="https://github.com/user-attachments/assets/34c1a221-ffde-400f-8e88-ac004ef18a49" />
 
 
-2. sebelum melakukan backup cek ukuran file data dan schema untuk monitoring dan memanajemen ruang lokasi backup data dan server restore yang berbeda.
+3. sebelum melakukan backup cek ukuran file data dan schema untuk monitoring dan memanajemen ruang lokasi backup data dan server restore yang berbeda.
 
    - sudo du -h -d 1 /var/lib/mysql
      <img width="733" height="184" alt="Screenshot (177)" src="https://github.com/user-attachments/assets/6dc519da-4404-422a-b7e8-3c560db9bac5" />
 
 
-3. membuat file mkdir -r /mnt/backups
+4. melakukan full backup menggunakan percona xtrabackup
 
-4. melakukan cek ukuran lokasi file backup
+   - xtrabackup --backup --compress --user=root --password=passwordroot --target-dir=pathbackup
+     
+     <img width="1692" height="382" alt="Screenshot (179)" src="https://github.com/user-attachments/assets/40c718b4-a702-432b-951a-a4aec3839d41" />
+     - untuk level lanjutan, mengkonfigurasi ~./my.cnf sebagai default-dir xtrabackup yang menyimpan user backup merupakan langkah yang lebih aman supaya tidak menggunakan baris perintah **user** dan **passworduser**
 
-5. melakukan full backup ke lokasi file untuk menyimpan backup
+6. cek file di lokasi file backup
+   <img width="1108" height="540" alt="Screenshot (181)" src="https://github.com/user-attachments/assets/524bcb02-91a2-4e71-8bf6-8e58fcc171eb" />
 
-6. memberikan izin mysql untuk mengakses lokasi file backup
 
-7. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server yang berbeda
+8. melakukan full backup ke lokasi file untuk menyimpan backup
 
-8. memindahkan file backup ke lokasi file data
+9. memberikan izin mysql untuk mengakses lokasi file backup
 
-9. melakukan restore data file ke dalam database di server yang berbeda
+10. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server yang berbeda
+
+11. memindahkan file backup ke lokasi file data
+
+12. melakukan restore data file ke dalam database di server yang berbeda
 
 
 
