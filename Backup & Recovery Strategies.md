@@ -9,6 +9,10 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
 
 
 
+
+
+
+
 1. sebelum melakukan backup fisik data, hal yang perlu saya lakukan adalah cek size file data dan cek size database pada server.
 
    - sudo -
