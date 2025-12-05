@@ -1,4 +1,4 @@
-pada sesi ini, saya akan melakukan backup & restore pada server yang berbeda, melakukan backup dan restore point in time recovery pada server yang berbeda, dan migrasi data menggunakan metode replikasi master-slave menggunakan percona xtrabackup, binary log, dan gtid. 
+pada sesi ini, saya akan melakukan backup & restore pada server yang berbeda yang sudah terinstalasi database mysql server dan perxona xtrabackup.
 
 kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterprise backup:
 - percona xtrabackup merupakan tools backup open source dibandingkan mysql backup yang berbayar
@@ -6,7 +6,8 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
 - sangat cepat dan andal untuk membackup dan restore file data
 - non blocking saat melakukan backup, artinya backup bisa berjalan di saat database aktif (hot backup)
 - terintegrasi dengan incremental backup, parallel backup, compressed file backup, dan sebagainya.
-- menyimpan redo log (transaction log) selama menyimpan data fisik menggunakan xtrabackup dan harus menggunakan syntax **--prepare** saat melakukan restore data untuk menjaga konsistensi data. 
+- menyimpan redo log (transaction log) selama menyimpan data fisik menggunakan xtrabackup dan harus menggunakan syntax **--prepare** saat melakukan restore data untuk menjaga konsistensi data.
+- powerfull untuk system database mysql server.
 
 
 
@@ -48,11 +49,7 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
    <img width="1108" height="540" alt="Screenshot (181)" src="https://github.com/user-attachments/assets/524bcb02-91a2-4e71-8bf6-8e58fcc171eb" />
 
 
-8. melakukan full backup ke lokasi file untuk menyimpan backup
-
-9. memberikan izin mysql untuk mengakses lokasi file backup
-
-10. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server yang berbeda
+7. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server yang berbeda
 
 11. memindahkan file backup ke lokasi file data
 
