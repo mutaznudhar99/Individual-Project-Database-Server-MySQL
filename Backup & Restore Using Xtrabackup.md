@@ -1,6 +1,6 @@
 pada sesi ini, saya akan melakukan backup & restore pada server database mysql yang berbeda dengan versi yang sama 8.0 menggunakan percona xtrabackup.8.0
 
-kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterprise backup:
+kenapa memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterprise backup:
 - percona xtrabackup merupakan tools backup open source dibandingkan mysql backup yang berbayar
 - cocok untuk backup fisik data yang menyimpan data besar
 - sangat cepat dan andal untuk membackup dan restore file data
@@ -12,7 +12,7 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
 
 
 
-1. saya akan membuat 1 schema pada database server sebagai contoh, yang berisikan 1 table dan 5 baris data untuk melakukan restore data ke server yang berbeda.
+1. membuat 1 schema pada database server sebagai contoh, yang berisikan 1 table dan 5 baris data untuk melakukan restore data ke server yang berbeda.
 
    - menampilkan schema sebelum membuat schema baru
      <img width="803" height="218" alt="Screenshot (168)" src="https://github.com/user-attachments/assets/c7976a42-d017-488d-9965-2c887ee4c5ca" />
@@ -32,7 +32,7 @@ kenapa saya memilih menggunakan percona xtrbackup dibandingkan dengan mysql ente
    <img width="942" height="223" alt="Screenshot (178)" src="https://github.com/user-attachments/assets/34c1a221-ffde-400f-8e88-ac004ef18a49" />
 
 
-3. sebelum melakukan backup cek ukuran file data dan schema untuk monitoring dan memanajemen ruang lokasi backup data dan server restore yang berbeda.
+3. sebelum melakukan backup, cek ukuran file data dan schema untuk monitoring dan memanajemen ruang lokasi backup data dan server restore yang berbeda.
 
    - sudo du -h -d 1 /var/lib/mysql
      <img width="733" height="184" alt="Screenshot (177)" src="https://github.com/user-attachments/assets/6dc519da-4404-422a-b7e8-3c560db9bac5" />
