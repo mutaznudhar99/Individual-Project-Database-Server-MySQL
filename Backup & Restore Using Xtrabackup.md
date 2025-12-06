@@ -50,21 +50,48 @@ kenapa memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterpris
      - untuk level lanjutan, mengkonfigurasi ~./my.cnf sebagai default-dir xtrabackup yang menyimpan user backup merupakan langkah yang lebih aman supaya tidak menggunakan baris perintah **user** dan **passworduser**
 
 
-7. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server restore
+7. mengirim file backup ke server restore menggunakan ssh@ipserver:pathbackup
+   - penting untuk memberi izin kepemilikan username server pada pathbackup di server restore
+     
+     <img width="1001" height="221" alt="Screenshot (209)" src="https://github.com/user-attachments/assets/58ed636b-8d51-4528-a150-7e173e9389b3" />
 
 
-8. ubah kepemilikan pada backup file menjadi milik mysql
+9. ubah kepemilikan backup file menjadi milik mysql di server restore
+
+   <img width="1150" height="424" alt="Screenshot (203)" src="https://github.com/user-attachments/assets/af804b47-8db5-4409-b84b-93b8ed9d5c45" />
 
 
-9. **prepare** untuk menyimpan transaction log yang sudah commit, dan rollback transaction log yang belum commit
-    - funsinya untuk menjaga konsistensi data
+
+11. melakukan **prepare** sebelum restore data untuk menyimpan transaction log yang sudah commit, dan rollback transaction log yang belum commit
+    - fungsinya untuk menjaga konsistensi data
+
+      <img width="1687" height="334" alt="Screenshot (191)" src="https://github.com/user-attachments/assets/a22f692c-1277-435d-b630-1181169ed054" />
 
 
-11. hapus file data dir dan log biner pada server restore. perlu hati-hati karena ini sangat critical untuk system database server apabila ada kesalahan.
+12. hapus file data dir dan log biner pada server restore. saya melakukannya dengan hati-hati karena ini sangat critical untuk system database server apabila ada kesalahan.
+    - restore akan gagal apabila data dir di server restore belum dihapus
+    - hal ini penting dilakukan untuk mengganti data dir lama dengan yang baru hasil full backup dari source server
+    - mentransfer data dari database source server kedalam database server restore
+
+      <img width="797" height="69" alt="Screenshot (204)" src="https://github.com/user-attachments/assets/57833c3a-8874-4860-a6b5-23358edad331" />
+
 
 10. melakukan restore backup file
+    <img width="1688" height="394" alt="Screenshot (205)" src="https://github.com/user-attachments/assets/56674a4c-5ac8-413c-a631-3debc4b3d214" />
 
-11. cek schemas pada server yang berbeda
+12. berikan izin kepemilikan mysql pada repositori /var/lib/mysql dan /var/log/mysql dan start mysql
+    <img width="725" height="63" alt="Screenshot (206)" src="https://github.com/user-attachments/assets/56c5acbe-adf6-4e54-b704-019048774ab4" />
+
+12. cek schemas dan size pada server restore
+    
+    <img width="886" height="496" alt="Screenshot (207)" src="https://github.com/user-attachments/assets/07a1c11f-690e-4595-bafc-50ead031e412" />
+
+    <img width="1068" height="325" alt="Screenshot (208)" src="https://github.com/user-attachments/assets/435700fc-8c7a-49bd-bf87-7a6bd6c800f0" />
+
+
+14. cek data exist pada database yang sudah dibuat diawal menggunakan **sql statement**
+    <img width="1157" height="207" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/d8abfedd-9f41-4607-bdbc-ab730be53ef7" />
+
 
 
 
