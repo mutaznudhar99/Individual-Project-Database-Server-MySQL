@@ -1,7 +1,7 @@
-sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS linux, pastikan OS sudah terinstall dan terkonfigurasi pada host OS di desktop menggunakan virtual machine.
+sebelum melakukan instalasi & konfigurasi database MySQL Server pada level OS linux, saya sudah menginstall virtual machine dan mengkonfigurasi OS Linux ke dalam VM
 
 
-setelah instalasi OS linux sudah selesai, selanjutnya saya akan melakukan instalasi database mysql server di OS linux yang sudah terinstall
+setelah instalasi OS linux sudah selesai, selanjutnya melakukan instalasi database mysql server di OS linux yang sudah terinstall
 
 
 1. Update operasi sistem linux
