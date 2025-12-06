@@ -87,7 +87,7 @@ setelah instalasi OS linux sudah selesai, selanjutnya melakukan instalasi databa
    - sudo vim /etc/mysql/mysql.conf.d/mysql.cnf
 
      <img width="1028" height="111" alt="Screenshot (152)" src="https://github.com/user-attachments/assets/a2e6018a-9e1b-4720-aab5-3c582487a053" />
-     <img width="1221" height="514" alt="Screenshot (151)" src="https://github.com/user-attachments/assets/86ec7fa8-48c0-4ff9-928b-e2e82b8f0f3d" />
+     <img width="1279" height="600" alt="Screenshot (202)" src="https://github.com/user-attachments/assets/67e8b5d6-7dde-4eb2-83e4-330d1afe022f" />
         - saya mengaturnya ke dalam lingkungan non produksi yang disesuaikan dengan kebutuhan untuk database manajemen, backup & recovery, high availibility, dan monitoring logging.
         - apabila user ingin mengaktifkan variable tambahan pada databses server, ini bisa dilakukan dengan menambahkan statement pada **mysqld.cnf**
 
