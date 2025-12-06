@@ -27,6 +27,10 @@ kenapa memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterpris
      <img width="948" height="235" alt="Screenshot (176)" src="https://github.com/user-attachments/assets/8b50d5bf-cd91-4bd5-a089-2bfb4a75932b" />
      <img width="907" height="147" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/57b24600-fb6b-4c46-90c2-6452260e6e79" />
 
+   - cek size schemas yang ada sebelum backup
+     <img width="1113" height="576" alt="Screenshot (194)" src="https://github.com/user-attachments/assets/53de68a1-6ce4-497f-8c36-294fca5f8412" />
+
+
 
 2. membuat file mkdir -r /mnt/backups yang digunakan untuk menyimpan backup sementara.
    <img width="942" height="223" alt="Screenshot (178)" src="https://github.com/user-attachments/assets/34c1a221-ffde-400f-8e88-ac004ef18a49" />
