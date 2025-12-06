@@ -50,14 +50,17 @@ kenapa memilih menggunakan percona xtrbackup dibandingkan dengan mysql enterpris
      - untuk level lanjutan, mengkonfigurasi ~./my.cnf sebagai default-dir xtrabackup yang menyimpan user backup merupakan langkah yang lebih aman supaya tidak menggunakan baris perintah **user** dan **passworduser**
 
 
-7. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server yang berbeda
+7. mengirim file backup ke server yang berbeda menggunakan ssh@ipserver dan lokasi file backup di server restore
 
 
-8. ubah kepemilikan pada backup file menjadi milik database server
+8. ubah kepemilikan pada backup file menjadi milik mysql
 
 
 9. **prepare** untuk menyimpan transaction log yang sudah commit, dan rollback transaction log yang belum commit
     - funsinya untuk menjaga konsistensi data
+
+
+11. hapus file data dir dan log biner pada server restore. perlu hati-hati karena ini sangat critical untuk system database server apabila ada kesalahan.
 
 10. melakukan restore backup file
 
