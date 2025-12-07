@@ -3,6 +3,9 @@ hal ini penting dilakukan untuk memigrasi data critical. hal yang dibutuhkan saa
 1. menyediakan 1 server primary dan server standby
 2. menggunakan tools xtrabackup
 3. mengaktifkan binar log + gtid (global transaction identifier), gtid menjadi dasar yang penting untuk replikasi modern, pemulihan, dan failover.
-metode ini berupa metode kelanjutan dari backup & recovery pitr menggunakan xtrabackup + binary log. 
+metode ini berupa metode kelanjutan dari backup & recovery pitr menggunakan xtrabackup + binary log.
+
+
+1. 
 
 
