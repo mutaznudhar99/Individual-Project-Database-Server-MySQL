@@ -37,7 +37,7 @@ fungsi binary log:
    <img width="933" height="95" alt="Screenshot (271)" src="https://github.com/user-attachments/assets/7cb15fe7-347d-4333-9d30-10d2f1860f26" />
 
 10. transfer folder backup dari server primary ke server standby
-   <img width="1306" height="252" alt="Screenshot (272)" src="https://github.com/user-attachments/assets/7fca4185-8625-47e6-aa4a-64bd8a52064a" />
+    <img width="1306" height="252" alt="Screenshot (272)" src="https://github.com/user-attachments/assets/7fca4185-8625-47e6-aa4a-64bd8a52064a" />
 
 11. cek file backup di folder server standby
     - memastikan isi file backup sesuai dengan file backup di server primary
