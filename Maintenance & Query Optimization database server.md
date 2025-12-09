@@ -29,7 +29,9 @@ pada sesi kali ini, saya akan melakukan maintenance database server untuk mengem
 
 6. cek fragmentasi dan size table (innodb)
    <img width="1270" height="429" alt="Screenshot (329)" src="https://github.com/user-attachments/assets/76d23c87-a629-4615-8d42-f5d387317044" />
-   - frag_percent = 10-20% melakukan analisis table untuk mengembalikan data statistik yang akurat
+   - free_mb = merupakan ruang kosong yang terfragmentasi. apabila tinggi, artinya table tersebut terfagmentasi. 
+   - frag_percent = fragmentasi tinggi disebabkan oleh proses delete/update yang terus-menerus pada table. 10-20 persen fragmentasi melakukan analisis table untuk mengembalikan data statistik yang akurat menjadi pilihan yang tepat.
+   - index_mb = apabila size index besar, mempertimbangkan menghapus index yang jarang digunakan merupakan pilihan yang tepat. 
 
 7. cek index yang jarang digunakan atau bahkan sama sekali tidak digunakan selama monitoring index
    <img width="1270" height="395" alt="Screenshot (330)" src="https://github.com/user-attachments/assets/55447a4a-fe38-4588-9423-970255e7ec12" />
