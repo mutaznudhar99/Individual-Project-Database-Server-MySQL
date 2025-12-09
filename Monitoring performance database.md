@@ -42,7 +42,7 @@ adapun fitur external/tools ketiga yang bisa dipertimbangkan untuk memonitoring 
 7. melihat daftar query statement yang terkunci (lock wait)
    - terjadi apabila transaksi a mengunci transaksi, dan transaksi b perlu menunggu kunci terbuka di sesi yang berbeda.
    - solusi = menunggu transaksi a (commit/rollback), atau kill (blocking_pid)
-   <img width="942" height="244" alt="Screenshot (346)" src="https://github.com/user-attachments/assets/58d9ccd0-1d69-42ed-9ec2-6f2b58dfcf10" />
+   <img width="790" height="581" alt="Screenshot (347)" src="https://github.com/user-attachments/assets/058b5586-9e96-4dff-bdc9-6ed1824e6508" />
    <img width="1459" height="416" alt="Screenshot (349)" src="https://github.com/user-attachments/assets/6f437c1f-3af4-4f40-840e-a644b82271a0" />
    <img width="1400" height="365" alt="Screenshot (351)" src="https://github.com/user-attachments/assets/478f3362-eecd-4df8-8dd9-4f9976196841" />
    <img width="1052" height="395" alt="Screenshot (352)" src="https://github.com/user-attachments/assets/c092e8e5-dfc0-43e1-acaa-b9bb6aff762e" />
