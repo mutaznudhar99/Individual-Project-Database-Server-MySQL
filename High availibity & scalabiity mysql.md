@@ -10,6 +10,7 @@ mysql innodb cluster menggabungkan beberapa komponen native, diantaranya:
 - mysql router, sebagai penghubung/connection pooling antara client dengan node database server.
 
 hal-hal yang perlu dipersiapkan sebelum melakukan clustering data.
+- ruang disk pada desktop
 - 1 server primary mysql + mysqlshell
 - 1 server replica mysql + mysqlshell
 - 1 server replica mysql + mysqlshell
