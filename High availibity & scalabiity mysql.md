@@ -9,7 +9,7 @@ mysql innodb cluster menggabungkan beberapa komponen native, diantaranya:
 - mysql shell, sebagai command line adminAPI setiap server
 - mysql router, sebagai perantara/proxy yang berdiri di antara aplikas(client) dan innodb cluster. berperan menyediakan high availibility dan load balancing.
 
-hal-hal yang perlu dipersiapkan sebelum melakukan clustering data.
+hal yang dipersiapkan sebelum melakukan clustering data.
 - ruang disk yang cukup
 - 1 server primary mysql + mysqlshell
 - 1 server replica mysql + mysqlshell
