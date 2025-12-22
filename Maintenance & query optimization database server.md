@@ -1,4 +1,4 @@
-pada sesi kali ini, saya akan melakukan maintenance database server untuk mengembalikan database server ke performa terbaiknya yang memungkinkan penerapan ini bisa dilakukan pada level enterprise. 
+pada sesi kali ini, saya akan melakukan maintenance database server yang bisa dilakukan secara rutin untuk menghasilkan data spesifik yang akurat sehingga membuat performa dan perencanaan eksekusi query menjadi lebih optimal. 
 
 
 
