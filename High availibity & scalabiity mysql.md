@@ -1,7 +1,6 @@
-pada sesi kali ini, saya akan melakukan high availibility database dan clustering terintegrasi menggunakan beberapa fitur native dari mysql atau disebut dengan innodb cluster mysql. hal ini bertujuan untuk:
-- menyediakan ketersediaan database yang tinggi (HA)
-- skalabilitas baca
-- perpindahan peran secara otomatis (failover automatic)
+pada sesi kali ini, saya akan melakukan innodb clsuter mysql untuk high availibility database dan clustering terintegrasi antara 1 server primary dan beberapa server standby menggunakan beberapa fitur native dari mysql. hal ini bertujuan untuk:
+- menyediakan ketersediaan database yang tinggi (HA), karena memiliki fitur failover otomatis.
+- skalabilitas baca, untuk tidak membenani server primary
 - memastikan konsistensi data yang kuat
 
 mysql innodb cluster menggabungkan beberapa komponen native, diantaranya:
@@ -118,9 +117,6 @@ hal yang dipersiapkan sebelum melakukan clustering data.
 
 
 
-
-
-##secara teknis, innodb cluster bisa dilakukan. untuk level enterprise perlu mempertimbangkan hal fundamental seperti keamanan, kemudahan pengoperasian dan sebagainya.
 
     
 
