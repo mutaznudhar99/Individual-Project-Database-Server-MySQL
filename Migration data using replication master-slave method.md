@@ -1,10 +1,10 @@
-pada sesi ini, saya akan melakukan migrasi data dari server primary ke server standby menggunakan metode replikasi master-slave untuk pengaplikasian migrasi data near zero downtime.
-hal ini penting dilakukan untuk memigrasi data critical. hal yang dibutuhkan saat memigrasi data menggunakan metode rpelikasi master-slave:
-- menyediakan 1 server primary dan 1 server standby menggunakan versi yang sama atau versi yang berbeda (minor)
-- migrasi versi mysql 8.0.34 - 8.0.34
-- menggunakan tools xtrabackup
-- mengaktifkan binar log + gtid (global transaction identifier), gtid menjadi dasar yang penting untuk replikasi modern, pemulihan, dan failover.
-metode ini berupa metode kelanjutan dari backup & recovery pitr menggunakan xtrabackup + binary log.
+pada sesi ini, saya akan melakukan migrasi database dari server primary ke server standby menggunakan metode replikasi master-slave untuk pengaplikasian migrasi database near zero downtime. pengaplikasian ini bisa dilakukan untuk kebutuhan maintenance server primary atau kebutuhan skalabilitas baca pada server primary tanpa membebani kerja server primary.
+
+hal yang perlu dilakukan:
+- 1 server primary
+- 1 server standby
+- install tool xtrabackup
+- mengaktifkan binar log + gtid (global transaction identifier), binar log dan gtid menjadi dasar yang penting untuk replikasi modern, pemulihan, dan failover.
 
 
 1. konfigurasi mysql.cnf pada source server dan replica server
@@ -64,7 +64,7 @@ metode ini berupa metode kelanjutan dari backup & recovery pitr menggunakan xtra
     <img width="913" height="169" alt="Screenshot (315)" src="https://github.com/user-attachments/assets/ba3d9f37-168c-4da3-b64a-54527ae669f8" />
     <img width="954" height="380" alt="Screenshot (316)" src="https://github.com/user-attachments/assets/bfbd8325-baf2-4261-ba7c-0ba283cab39d" />
 
-19. untuk melakukan migrasi data near zero downtime bisa melakukan step berikut:
+19. mempromosikan server standby menjadi server primary:
     - sutdown mysql service database source server
     - stop replica di server replica
     - reset all replica
