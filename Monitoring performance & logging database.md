@@ -8,7 +8,7 @@ pada sesi kali ini, saya akan melakukan query statement untuk monitoring perform
    - fullpct = merupakan ukuran data pada memory innodb_buffer_pool_size yang saat ini sedang digunakan oleh database server. apabila ukurannya mendekati angka memory innodb_bufferr_pool_size, mempertimbangkan untuk meningkatkan memory buffer menjadi pilihan yang tepat untuk performa database.
 
 
-2. cek rasio hit buffer pool
+2. cek hit rasio buffer pool
    <img width="1282" height="260" alt="Screenshot (336)" src="https://github.com/user-attachments/assets/04210d32-584d-42c1-bd83-f3c09c612384" />
    - seberapa sering database mencari atau menemukan data yang berada di dalam buffer pool tanpa membaca data dari disk yang lebih lambat.
    - idealnya tidak kurang dari 95%. apabila kurang dari 95% artinya buffer pool terlalu kecil untuk menampung data yang sering diakses, meningkatkan memory buffer pool bisa menjadi pilihan yang tepat.
