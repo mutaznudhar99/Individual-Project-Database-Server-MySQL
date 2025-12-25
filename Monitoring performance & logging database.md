@@ -1,5 +1,5 @@
-pada sesi kali ini, saya akan menampilkan beberapa query untuk memonitoring performa database server menggunakan fitur internal seperti logging, sys, dan sebagainya.
-adapun fitur external/tools ketiga yang bisa dipertimbangkan untuk memonitoring database server secara otomatis seperti prometheus dan percona management dan monitoring. karena penggunaan fitur tools ketiga membutuhkan ruang disk yang sangat besar, oleh karena itu saya berfokus kepada fitur monitoring internal yang disediakan oleh mysql.
+pada sesi kali ini, saya akan melakukan query statement untuk monitoring performa database server menggunakan fitur internal seperti file logging, sys, dan sebagainya.
+
 
 1. cek innodb buffer pool sebagai memory utama untuk menyimpan data tabel dan index
    <img width="943" height="360" alt="Screenshot (335)" src="https://github.com/user-attachments/assets/7dca5bdb-0ad4-4235-9e64-cbc9c2426713" />
