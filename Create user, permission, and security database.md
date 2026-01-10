@@ -1,13 +1,14 @@
-pada sesi kali ini, saya akan membuat role, permission, user, dan security database yang bisa diterapkan pada lingkungan enterprise untuk menjaga keamanan database server. kemudian mengaktifkan pgaudit untuk proses monitoring setiap user yang mengakses data.
+pada sesi kali ini, saya akan melakukan pembuatan user, role, dan permission berdasarkan role-based access control (RBAC) dan least privilage untuk menjaga keamanan database server.
 
-dalam project testing ini, saya akan membuat user operasional yang dibagi menjadi user **read** and **writer**.
+dalam testing ini, saya akan membuat user operasional atau pemisahan tugas antara user **reader** and **writer**.
 
 
-1. login ke dalam database menggunakan user 'root', karena server belum membuat user operasional lain.
+1. login ke dalam database menggunakan user 'root' sebagai user administratif tertinggi database server.
+   
    <img width="909" height="466" alt="Screenshot (153)" src="https://github.com/user-attachments/assets/046f4352-73e7-4f3e-9c0e-e0891035346a" />
 
 
-2. cek validasi password yang disetujui oleh server saat membuat user
+3. Validasi kebijakan password yang disetujui oleh database server untuk memenuhi standar keamanan.
    - memastikan password yang dibuat untuk user sesuai dengan keamanan database server
 
      <img width="921" height="126" alt="Screenshot (182)" src="https://github.com/user-attachments/assets/644d0afe-ac83-41ce-b60a-ef98c299c99b" />
@@ -22,9 +23,8 @@ dalam project testing ini, saya akan membuat user operasional yang dibagi menjad
      - cek_user_name : tidak boleh mengandung nama user
 
 
-4. selanjutnya, membuat user operasional dengan role **user_reader** dan **user_writer** menggunakan validasi password yang disetujui oleh server.
-   - memastikan user operasional yang login ke dalam database server seminimal mungkin diberikan izin hak akses.
-   - merupakan security database level middle enterprise yang wajib saya terapkan untuk keamanan data.
+4. Deployment User Operasional Berbasis RBAC
+   - memastikan user operasional yang login ke dalam database memiliki hak akses seminimal mungkin.
 
      - user 'reporting' dengan role 'user_reader'
        <img width="1106" height="413" alt="Screenshot (157)" src="https://github.com/user-attachments/assets/07319fc3-829f-4627-9169-efc9186c5b96" />
@@ -39,7 +39,7 @@ dalam project testing ini, saya akan membuat user operasional yang dibagi menjad
        - specific ip : digunakan hanya untuk mengizinkan koneksi dari satu alamat ip yang ditentukan
 
 
-5. Monitoring user exist/yang ada di dalam database server beserta dengan role dan autentifikasi security server.
+5. Monitoring dan audit identitas user.
 
    - menampilkan user yang ada di dalam server database
    - memastikan user yang dibuat memiliki autentifikasi security yang disetujui oleh database server
